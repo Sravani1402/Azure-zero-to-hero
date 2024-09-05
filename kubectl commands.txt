@@ -1,0 +1,15 @@
+To get into the pod:
+kubectl exec -it <pod-name> -- /bin/sh
+
+To check the logs of pod:
+kubectl logs -f <pod-name> -n <namespace-name>
+
+To check the image which pod is trying to pull:
+kubectl describe pod <pod-name> -n <namespace-name>
+
+To check the secrets and edit in namespace:
+kubectl get secrets -n <namespacename>
+kubectl edit secret <secret-name> -n <namespacename>
+
+To check the pods, deployments and services
+kubectl get all -n <namespacename>
